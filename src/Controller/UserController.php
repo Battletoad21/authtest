@@ -28,6 +28,22 @@ class UserController extends AbstractController
     }
 
     /**
+     * @Route("/users/home", name="users_home")
+     */
+    public function home()
+    {
+        $repository = $this->getDoctrine()->getRepository(User::class);
+
+        $user = $this->getUser();
+        $id = $user->getId();
+        $user = $repository->find($id);
+
+        return $this->render('user/home.html.twig', [
+            'user' => $user,
+        ]);
+    }
+
+    /**
      * @Route("/users/{id}", name="users_show")
      * @return Response
     */

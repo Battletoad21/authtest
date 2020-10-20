@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <h1>{{ user.identifiant }}</h1>
+                <h2>{{ user.nom }}Km, {{ user.prenom }} Heures</h2>
+            </div>
+        </div>
+
+        <p>
+            {{ user.adresse }}
+        </p>
+        <p>
+            {{ user.codepostal }}
+        </p>
+        <p>
+            {{ user.ville }}
+        </p>
+        <p>
+            {{ user.pays }}
+        </p>
+    </div>
+
+{% endblock %}

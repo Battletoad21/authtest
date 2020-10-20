@@ -100,9 +100,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator implements P
 
         //throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
 
-        $user = $token->getUser();
-        $id = $user->getToken();
-        return new RedirectResponse($this->urlGenerator->generate('users_show', $id));
+        return new RedirectResponse($this->urlGenerator->generate('users_home'));
     }
 
     protected function getLoginUrl()
