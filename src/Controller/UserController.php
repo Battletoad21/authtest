@@ -11,6 +11,16 @@ use App\Form\UserType;
 
 class UserController extends AbstractController
 {
+
+    /**
+     * @Route("/", name="users_hello")
+     */
+    public function hello()
+    {
+
+        return $this->render('user/hello.html.twig');
+    }
+
     /**
      * @Route("/users", name="users_index")
      */
